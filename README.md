@@ -95,7 +95,7 @@ After running generate_sentences.py, the user will obtain a sentences.txt file c
      # Run
      python predicting.py -i ./pred_dat.txt -l 260 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path/ -r ./ -g True
 
-### Visitor Map
+### Visitor Map:
 
 [![ClustrMaps](https://www.clustrmaps.com/map_v2.png?d=m5d_n6k5WRf2qNOJNj2u2MSngBVWuglv1yxE9N32k7Y&cl=ffffff)](https://clustrmaps.com/site/1c6oc)
 
