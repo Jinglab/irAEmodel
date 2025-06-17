@@ -11,6 +11,7 @@ Model usage:
 
     # Use generate_sentences.py to generate sentences in bash 
     # Help
+    
     python generate_sentences.py --help
     
     usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
@@ -32,23 +33,36 @@ After runing generate_sentences.py, user will get a .txt file which contains sen
 
 2.Training
 
-    # Use generate_sentences.py to generate sentences in bash 
+    # Use training.py to train irAE model in bash 
     # Help
     
-    python generate_sentences.py --help
+    python training.py --help
+        
+    usage: training.py [-h] --train_dat TRAIN_DAT [--length LENGTH] [--batch_size BATCH_SIZE] [--support SUPPORT] [--query QUERY] [--episodes EPISODES] --pretrained_model_path
+                       PRETRAINED_MODEL_PATH [--save_path SAVE_PATH] [--with_gpu WITH_GPU]
     
-    usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
-    
-    Generating training data or prediction data based on gene count matrix (.txt)
+    Training irAE model based on gene sentences from irAE positive related cells and negtive related cells
     
     optional arguments:
       -h, --help            show this help message and exit
-      --count_df_path COUNT_DF_PATH, -c COUNT_DF_PATH
+      --train_dat TRAIN_DAT, -t TRAIN_DAT
                             The count matrix path(.txt), rownames are genes, colnames are cell barcodes or sample names
-    --length LENGTH, -l LENGTH
-                          Length of sentence
-    --save_path SAVE_PATH, -s SAVE_PATH
-                          The path for saving gene sentences
+      --length LENGTH, -l LENGTH
+                            Length of sentence
+      --batch_size BATCH_SIZE, -b BATCH_SIZE
+                            Length of sentence
+      --support SUPPORT, -k SUPPORT
+                            The cell numbers in support set
+      --query QUERY, -q QUERY
+                            The cell numbers in query set
+      --episodes EPISODES, -e EPISODES
+                            The training episodes
+      --pretrained_model_path PRETRAINED_MODEL_PATH, -p PRETRAINED_MODEL_PATH
+                            The pretrained model saved path
+      --save_path SAVE_PATH, -s SAVE_PATH
+                            The final model saved path
+      --with_gpu WITH_GPU, -g WITH_GPU
+                            Use GPU
 
 3.Prediction
 
