@@ -28,6 +28,7 @@ Model usage:
                             The path for saving gene sentences
 
     # Run
+    
     python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./train_sentences.txt
 After runing generate_sentences.py, user will get a .txt file which contains sentences of cells.
 
