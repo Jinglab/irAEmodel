@@ -30,7 +30,7 @@ The predictive module built into irAEatlas is a knowledge-informed model that le
     python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./sentences.txt
 After running generate_sentences.py, the user will obtain a sentences.txt file containing cell-related sentences. When using this file for training, the user needs to add a column named irAE_related to the dataframe to indicate whether the cells are positively or negatively associated with the irAE phenotype.
 
-2.Training
+#### 2.Training
 
     # Use training.py to train irAE model in bash 
     # Help
@@ -64,7 +64,7 @@ After running generate_sentences.py, the user will obtain a sentences.txt file c
     # Run
     python training.py -t ./train_dat.txt -l 260 -b 1 -k 2 -q 2 -e 300 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path -g True
 
-3.Prediction
+#### 3.Prediction
 
     # Use predicting.py to predict irAE scores of cells or samples in bash 
     # Help
