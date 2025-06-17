@@ -22,10 +22,14 @@ Model usage:
       -h, --help            show this help message and exit
       --count_df_path COUNT_DF_PATH, -c COUNT_DF_PATH
                             The count matrix path(.txt), rownames are genes, colnames are cell barcodes or sample names
-    --length LENGTH, -l LENGTH
-                          Length of sentence
-    --save_path SAVE_PATH, -s SAVE_PATH
-                          The path for saving gene sentences
+      --length LENGTH, -l LENGTH
+                            Length of sentence
+      --save_path SAVE_PATH, -s SAVE_PATH
+                            The path for saving gene sentences
+
+    # Run
+    python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./train_sentences.txt
+After runing generate_sentences.py, user will get a .txt file which contains sentences of cells.
 
 2.Training
 
