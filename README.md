@@ -4,7 +4,8 @@ The predictive module built into irAEatlas is a knowledge-informed model that le
 Major functions: 
 
 1.generating sentences
-
+    # use generate_sentences.py to generate sentences in bash 
+    
     python generate_sentences.py --help
     
     usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
