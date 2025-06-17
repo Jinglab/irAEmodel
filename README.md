@@ -64,7 +64,7 @@ After running generate_sentences.py, the user will obtain a sentences.txt file c
     # Run
     python training.py -t ./train_dat.txt -l 260 -b 1 -k 2 -q 2 -e 300 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path -g True
 
-#### 3.Prediction
+#### 3.Predicting
 
     # Use predicting.py to predict irAE scores of cells or samples in bash 
     # Help
