@@ -1,6 +1,6 @@
 # irAEatlas
 ### Graphical Abstract
-![image](https://github.com/Jinglab/irAEatlas/blob/main/Introduction.png)
+![image](https://github.com/Jinglab/irAEatlas/blob/main/ForFrontPage0828.png)
 
 ### The code used in manuscript:
 
