@@ -3,11 +3,11 @@ The predictive module built into irAEatlas is a knowledge-informed model that le
 
 ### Model usage: 
 
-0.Create conda environment based on yaml file 
+#### 0.Create conda environment based on yaml file 
 
     conda env create -f irAEmodel_env_cuda12.4_20250617.yml 
 
-1.Generating sentences
+#### 1.Generating sentences
 
     # Use generate_sentences.py to generate sentences in bash 
     # Help
