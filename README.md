@@ -6,6 +6,7 @@ Major functions:
 1.generating sentences
 
     python generate_sentences.py --help
+    
     usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
     Generating training data or prediction data based on gene count matrix (.txt)
     optional arguments:
