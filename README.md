@@ -66,14 +66,14 @@ After runing generate_sentences.py, user will get a .txt file which contains sen
 
 3.Prediction
 
-    # Use generate_sentences.py to generate sentences in bash 
+    # Use predicting.py to predict irAE scores of cells or samples in bash 
     # Help
     
     python predicting.py --help
     usage: predicting.py [-h] --pred_dat PRED_DAT [--length LENGTH] --pretrained_model_path PRETRAINED_MODEL_PATH
                          [--save_checkpoint_path SAVE_CHECKPOINT_PATH] [--result_save_path RESULT_SAVE_PATH] [--with_gpu WITH_GPU]
     
-    Predicting related irAE scores
+    Predicting irAE scores
     
     optional arguments:
       -h, --help            show this help message and exit
