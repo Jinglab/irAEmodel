@@ -26,3 +26,43 @@ Model usage:
                           Length of sentence
     --save_path SAVE_PATH, -s SAVE_PATH
                           The path for saving gene sentences
+
+2.Training
+
+    # Use generate_sentences.py to generate sentences in bash 
+    # Help
+    
+    python generate_sentences.py --help
+    
+    usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
+    
+    Generating training data or prediction data based on gene count matrix (.txt)
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --count_df_path COUNT_DF_PATH, -c COUNT_DF_PATH
+                            The count matrix path(.txt), rownames are genes, colnames are cell barcodes or sample names
+    --length LENGTH, -l LENGTH
+                          Length of sentence
+    --save_path SAVE_PATH, -s SAVE_PATH
+                          The path for saving gene sentences
+
+3.Prediction
+
+    # Use generate_sentences.py to generate sentences in bash 
+    # Help
+    
+    python generate_sentences.py --help
+    
+    usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
+    
+    Generating training data or prediction data based on gene count matrix (.txt)
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      --count_df_path COUNT_DF_PATH, -c COUNT_DF_PATH
+                            The count matrix path(.txt), rownames are genes, colnames are cell barcodes or sample names
+    --length LENGTH, -l LENGTH
+                          Length of sentence
+    --save_path SAVE_PATH, -s SAVE_PATH
+                          The path for saving gene sentences
