@@ -27,8 +27,8 @@ The predictive module built into irAEatlas is a knowledge-informed model that le
                             The path for saving gene sentences
 
     # Run
-    python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./train_sentences.txt
-After runing generate_sentences.py, user will get a .txt file which contains sentences of cells.
+    python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./sentences.txt
+After running generate_sentences.py, the user will obtain a sentences.txt file containing cell-related sentences. When using this file for training, the user needs to add a column named irAE_related to the dataframe to indicate whether the cells are positively or negatively associated with the irAE phenotype.
 
 2.Training
 
