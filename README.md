@@ -13,7 +13,6 @@ Model usage:
     # Help
     
     python generate_sentences.py --help
-    
     usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
     
     Generating training data or prediction data based on gene count matrix (.txt)
@@ -37,7 +36,6 @@ After runing generate_sentences.py, user will get a .txt file which contains sen
     # Help
     
     python training.py --help
-        
     usage: training.py [-h] --train_dat TRAIN_DAT [--length LENGTH] [--batch_size BATCH_SIZE] [--support SUPPORT] [--query QUERY] [--episodes EPISODES] --pretrained_model_path
                        PRETRAINED_MODEL_PATH [--save_path SAVE_PATH] [--with_gpu WITH_GPU]
     
@@ -63,23 +61,33 @@ After runing generate_sentences.py, user will get a .txt file which contains sen
                             The final model saved path
       --with_gpu WITH_GPU, -g WITH_GPU
                             Use GPU
+    # Run
+    python training.py -t ./train_dat.txt -l 260 -b 1 -k 2 -q 2 -e 300 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path -g True
 
 3.Prediction
 
     # Use generate_sentences.py to generate sentences in bash 
     # Help
     
-    python generate_sentences.py --help
+    python predicting.py --help
+    usage: predicting.py [-h] --pred_dat PRED_DAT [--length LENGTH] --pretrained_model_path PRETRAINED_MODEL_PATH
+                         [--save_checkpoint_path SAVE_CHECKPOINT_PATH] [--result_save_path RESULT_SAVE_PATH] [--with_gpu WITH_GPU]
     
-    usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
-    
-    Generating training data or prediction data based on gene count matrix (.txt)
+    Predicting related irAE scores
     
     optional arguments:
       -h, --help            show this help message and exit
-      --count_df_path COUNT_DF_PATH, -c COUNT_DF_PATH
-                            The count matrix path(.txt), rownames are genes, colnames are cell barcodes or sample names
-    --length LENGTH, -l LENGTH
-                          Length of sentence
-    --save_path SAVE_PATH, -s SAVE_PATH
-                          The path for saving gene sentences
+      --pred_dat PRED_DAT, -i PRED_DAT
+                            Prediction data file path
+      --length LENGTH, -l LENGTH
+                            Length of sentence
+      --pretrained_model_path PRETRAINED_MODEL_PATH, -p PRETRAINED_MODEL_PATH
+                            The pretrained model saved path
+      --save_checkpoint_path SAVE_CHECKPOINT_PATH, -s SAVE_CHECKPOINT_PATH
+                            The trained irAE model saved path
+      --result_save_path RESULT_SAVE_PATH, -r RESULT_SAVE_PATH
+                            The save path for the predicted results
+      --with_gpu WITH_GPU, -g WITH_GPU
+                            Use GPU
+     # Run
+     python predicting.py -i ./pred_dat.txt -l 260 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path/ -r ./ -g True
