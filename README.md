@@ -1,12 +1,11 @@
 # irAEatlas
-The predictive module built into irAEatlas is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patients.
 ### Graphical Abstract
 ![image](https://github.com/Jinglab/irAEatlas/blob/main/Introduction.png)
 
 ### The code used in manuscript:
 
 ### Model usage: 
-
+The predictive module built into irAEatlas is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patients.
 #### 0.Create conda environment based on yaml file 
 
     conda env create -f irAEmodel_env_cuda12.4_20250617.yml 
