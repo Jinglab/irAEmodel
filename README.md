@@ -5,7 +5,7 @@
 ### The code used in manuscript:
 
 ### Model usage: 
-The predictive module built into irAEatlas is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patients.
+The predictive module built into irAEatlas is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patienxts.
 #### 0.Create conda environment based on yaml file 
 
     conda env create -f irAEmodel_env_cuda12.4_20250617.yml 
@@ -94,3 +94,9 @@ After running generate_sentences.py, the user will obtain a sentences.txt file c
                             Use GPU
      # Run
      python predicting.py -i ./pred_dat.txt -l 260 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path/ -r ./ -g True
+
+### Visitor Map
+
+[![ClustrMaps](https://www.clustrmaps.com/map_v2.png?d=m5d_n6k5WRf2qNOJNj2u2MSngBVWuglv1yxE9N32k7Y&cl=ffffff)](https://clustrmaps.com/site/1c6oc)
+
+     
