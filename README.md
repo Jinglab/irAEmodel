@@ -8,7 +8,9 @@ Major functions:
     python generate_sentences.py --help
     
     usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
+    
     Generating training data or prediction data based on gene count matrix (.txt)
+    
     optional arguments:
       -h, --help            show this help message and exit
       --count_df_path COUNT_DF_PATH, -c COUNT_DF_PATH
