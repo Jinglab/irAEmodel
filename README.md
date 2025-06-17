@@ -11,7 +11,6 @@ Model usage:
 
     # Use generate_sentences.py to generate sentences in bash 
     # Help
-    
     python generate_sentences.py --help
     
     usage: generate_sentences.py [-h] --count_df_path COUNT_DF_PATH [--length LENGTH] [--save_path SAVE_PATH]
@@ -28,7 +27,6 @@ Model usage:
                             The path for saving gene sentences
 
     # Run
-    
     python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./train_sentences.txt
 After runing generate_sentences.py, user will get a .txt file which contains sentences of cells.
 
