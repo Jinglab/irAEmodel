@@ -1,11 +1,12 @@
 # irAEatlas
 The predictive module built into irAEatlas is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patients.
 
-Major functions: 
+Model usage: 
 
-1.generating sentences
+1.Generating sentences
 
-    # use generate_sentences.py to generate sentences in bash 
+    # Use generate_sentences.py to generate sentences in bash 
+    # Help
     
     python generate_sentences.py --help
     
