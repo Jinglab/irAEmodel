@@ -6,13 +6,11 @@
 
 ### Model usage: 
 The predictive module is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patients.
-Before using this model, the user must first build a Conda environment by following the provided steps. Once the Conda environment is set up and activated, the user can generate sentences for training or prediction data using the generate_sentences.py script.
+Before using this model, the user must first build a Conda environment by following the provided steps. 
 #### 0.Create conda environment based on yaml file 
-
     conda env create -f irAEmodel_env_cuda12.4_20250617.yml 
-
+Once the Conda environment is set up and activated, the user can generate sentences for training or prediction data using the generate_sentences.py script.
 #### 1.Generating sentences
-
     # Use generate_sentences.py to generate sentences in bash 
     # Help
     
@@ -33,9 +31,7 @@ Before using this model, the user must first build a Conda environment by follow
     # Run
     python generate_sentences.py -c test_count_exp_dat.txt -l 260 -s ./sentences.txt
 After running generate_sentences.py, the user will obtain a sentences.txt file containing cell-related sentences. For training purposes, the user needs to add a column named irAE_related to the dataframe. This column should indicate whether the cells are positively or negatively associated with the irAE phenotype.
-
 #### 2.Training
-
     # Use training.py to train irAE model in bash 
     # Help
     
