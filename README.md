@@ -10,7 +10,9 @@ Before you run the pipeline, please install miniconda to manage software and dep
 #### 0.Create conda environment based on yaml file 
     conda env create -f irAEmodel_env_cuda12.4_20250617.yml 
 Once the conda environment is set up, the user can activate the environment by
+
     conda activate iraemodel 
+    
 #### 1.Generating sentences
     # Use generate_sentences.py to generate sentences in bash 
     # Help
