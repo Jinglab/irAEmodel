@@ -1,4 +1,4 @@
-name: StructFormer_test
+name: iraemodel
 channels:
   - defaults
 dependencies:
