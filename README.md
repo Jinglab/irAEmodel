@@ -1,15 +1,16 @@
-# irAEatlas
-### Graphical Abstract:
-![image](https://github.com/Jinglab/irAEatlas/blob/main/ForFrontPage0828.png)
+# The predictive model of irAEs
+### Distinct immune cell dynamics associated with immune-related adverse events during combined chemoradiation and immune checkpoint inhibitor therapy
+### Lei Zhang, Xiaokai Fan, Jun Ma, Jun Zhang , Ying Wei, Bin Hu, Di Zhou, Junjun Zhou, Yongrui Bai, Jianming Tang, Xiumei Ma, Haiyan Chen, Ying Jing
+In this study, we systematically characterized immune cells in peripheral blood and tumor tissues throughout combined chemoradiotherapy and immune checkpoint inhibitor (ICI) treatment using single-cell RNA sequencing (scRNA-seq) and single-cell V(D)J sequencing (scVDJ-seq). We found that chemoradiotherapy and ICI exert distinct effects on various immune cell populations associated with immune-related adverse events (irAEs). To capture the diverse roles and interactions of these cells, we employed deep learning to extract representative molecular features and develop predictive models for irAEs. These models were built using scRNA-seq data from blood samples collected at three time points: pre-radiotherapy (Model 1), pre-immunotherapy (Model 2), and on-immunotherapy (Model 3). Immune cell subclusters at each time point were classified as irAE-related—significantly enriched in irAE patients—or non-irAE-related—significantly enriched in non-irAE patients. Validation across multiple independent cohorts demonstrated that Model 3 achieved the highest accuracy in predicting irAE occurrence. The code used to develop these models is provided here. For detailed methods and model descriptions, please refer to our paper.
 
 ### The code used in manuscript:
 
-### Model usage: 
-The predictive module is a knowledge-informed model that leverages single-cell transcriptomic data from patients who developed irAEs and those who did not, enabling probability prediction of irAE occurrence in patients.
-Before using this model, the user must first build a Conda environment by following the provided steps. 
+### Usage: 
+Before you run the pipeline, please install miniconda to manage software and dependencies.
 #### 0.Create conda environment based on yaml file 
     conda env create -f irAEmodel_env_cuda12.4_20250617.yml 
-Once the Conda environment is set up and activated, the user can generate sentences for training or prediction data using the generate_sentences.py script.
+Once the conda environment is set up, the user can activate the environment by
+    conda activate iraemodel 
 #### 1.Generating sentences
     # Use generate_sentences.py to generate sentences in bash 
     # Help
