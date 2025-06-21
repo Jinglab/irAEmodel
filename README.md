@@ -3,8 +3,6 @@
 ### Lei Zhang, Xiaokai Fan, Jun Ma, Jun Zhang , Ying Wei, Bin Hu, Di Zhou, Junjun Zhou, Yongrui Bai, Jianming Tang, Xiumei Ma, Haiyan Chen, Ying Jing
 In this study, we systematically characterized immune cells in peripheral blood and tumor tissues throughout combined chemoradiotherapy and immune checkpoint inhibitor (ICI) treatment using single-cell RNA sequencing (scRNA-seq) and single-cell V(D)J sequencing (scVDJ-seq). We found that chemoradiotherapy and ICI exert distinct effects on various immune cell populations associated with immune-related adverse events (irAEs). To capture the diverse roles and interactions of these cells, we employed deep learning to extract representative molecular features and develop predictive models for irAEs. These models were built using scRNA-seq data from blood samples collected at three time points: pre-radiotherapy (Model 1), pre-immunotherapy (Model 2), and on-immunotherapy (Model 3). Immune cell subclusters at each time point were classified as irAE-related—significantly enriched in irAE patients—or non-irAE-related—significantly enriched in non-irAE patients. Validation across multiple independent cohorts demonstrated that Model 3 achieved the highest accuracy in predicting irAE occurrence. The code used to develop these models is provided here. For detailed methods and model descriptions, please refer to our paper.
 
-### The code used in manuscript:
-
 ### Usage: 
 Before you run the pipeline, please install miniconda to manage software and dependencies.
 #### 0.Create conda environment based on yaml file 
