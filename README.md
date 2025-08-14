@@ -62,6 +62,10 @@ After running generate_sentences.py, the user will obtain a sentences.txt file c
                             The final model saved path
       --with_gpu WITH_GPU, -g WITH_GPU
                             Use GPU
+      --reproduce REPRODUCE, -r REPRODUCE
+                            Reproduce the results
+      --set_seed SET_SEED, -seed SET_SEED
+                            Set seed for reproducibility
     # Run
     python training.py -t ./train_dat.txt -l 260 -b 1 -k 2 -q 2 -e 300 -p /home/xfan/irAE/pretrained_model/ -s ./model_save_path -g True
 
