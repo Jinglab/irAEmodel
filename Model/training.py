@@ -32,13 +32,46 @@ parser.add_argument('--episodes','-e',type=int, default=300, help='The training 
 parser.add_argument('--pretrained_model_path','-p',type=str, required=True,help="The pretrained model saved path")
 parser.add_argument('--save_path','-s',type=str,help='The final model saved path')
 parser.add_argument('--with_gpu','-g',type=bool, help='Use GPU')
+parser.add_argument('--reproduce','-r',type=bool, default=True, help='Reproduce the results')
+parser.add_argument('--set_seed','-seed',type=int, default=42, help='Set seed for reproducibility')
 
 args = parser.parse_args()
 
 ### main function
 ### train
 
-def train_prototype_hypersphere(dat_train,sen_len,pretrained_model_path,save_checkpoint_path,with_gpu,batch_size = 1,train_K = 8,train_Q = 8, train_episodes = 300,val_episodes = 30,val_steps = 10):
+def train_prototype_hypersphere(dat_train,
+                                sen_len,
+                                pretrained_model_path,
+                                save_checkpoint_path,
+                                with_gpu,
+                                batch_size = 1,
+                                train_K = 8,
+                                train_Q = 8, 
+                                train_episodes = 300,
+                                val_episodes = 30,
+                                val_steps = 10,
+                                reproduce = True,
+                                set_seed = 42):
+    
+    if reproduce:
+        if set_seed!=None:
+            # Set seed for PyTorch
+            torch.manual_seed(set_seed)
+
+            # Set seed for CUDA (if using GPUs)
+            torch.cuda.manual_seed(set_seed)
+            torch.cuda.manual_seed_all(set_seed)  # For multi-GPU setups
+
+            # Set seed for Python's random module
+            random.seed(set_seed)
+
+            # Set seed for NumPy
+            np.random.seed(set_seed)
+
+            # Ensure deterministic behavior for PyTorch operations
+            torch.backends.cudnn.deterministic = True
+            torch.backends.cudnn.benchmark = False
     
     if not os.path.exists(save_checkpoint_path):
         os.makedirs(save_checkpoint_path)
